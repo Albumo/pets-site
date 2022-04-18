@@ -1,0 +1,19 @@
+mixin banner(props)
+
+    | <!-- ********** banner-S-1 ********** -->
+
+    .banner
+        .banner__wrap.js-animate
+            .banner__banner-box
+                picture.banner__bg
+                    source(type="image/webp" srcset="static/img/content/banner-bg.webp" media="")
+                    img(class="lazyload" src="static/img/general/cork.png" data-src="static/img/content/banner-bg.jpg" alt="")
+
+                .banner__center.w-center
+                    .banner__content
+                        h1.banner__title Not only people </br>need a house
+                        .banner__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida est in porttitor  porttitor. Duis sodales elementum ipsum, vehicula condimentum erat fringilla et.
+                        .banner__btn-box
+                            a.btn(href="#") Make a friend
+
+    | <!-- ********** banner-S-1 ********** -->

@@ -1,0 +1,26 @@
+include ../components/common/head
+include ../components/common/include-js
+include ../components/common/img-svg
+
+include ../components/%=component_header=%/header/header
+include ../components/%=component_banner=%/banner/banner
+include ../components/%=component_shelter=%/shelter/shelter
+include ../components/%=component_pets=%/pets/pets
+include ../components/%=component_slider=%/slider/slider
+include ../components/%=component_help=%/help/help
+include ../components/%=component_donation=%/donation/donation
+include ../components/%=component_footer=%/footer/footer
+
+doctype html
+html(class="no-js" lang="en")
+    head
+        +head
+    body
+        .w-outer
+            +header
+            block content
+
+            +footer
+        +include-js
+
+        block scripts

@@ -1,0 +1,158 @@
+body {
+    overflow-x: hidden;
+    background-color: $primary-fill;
+    font-weight: $font-weight;
+    color: $primary-text;
+}
+
+html {
+
+    height: 100%;
+    @include respond-from(to-sm) {
+        font-size: $font-size;
+    }
+    font-size: $font-size-xs;
+    letter-spacing: 1.1px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Georgia", sans-serif;
+    font-size: $font-size-h1;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+    color: $primary-title;
+
+    @include respond-from(sm) {
+        font-size: $font-size-h1-sm;
+    }
+
+    @include respond-from(md) {
+        font-size: $font-size-h1-md;
+    }
+}
+
+h2 {
+    font-size: $font-size-h2;
+    color: $primary-title;
+
+    @include respond-from(sm) {
+        font-size: $font-size-h2-sm;
+    }
+
+    @include respond-from(md) {
+        font-size: $font-size-h2-md;
+    }
+}
+
+//Footer bottom
+.w-outer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.w-inner {
+    flex: 1 0 auto;
+}
+
+.btn {
+    padding: 14px 44px;
+    background: $btn-bg;
+    border: $btn-bd;
+    border-radius: 50px;
+    font-family: "Georgia", sans-serif;
+    font-size: 17px;
+    color: $btn-color;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .35s ease-in-out;
+
+    &:hover {
+        background: $btn-bg-hov;
+        border: $btn-bd-hov;
+        color: $btn-color-hov
+
+    }
+}
+
+.btn-secondary {
+    padding: 14px 44px;
+    background: $btn-secondary-bg;
+    border: $btn-secondary-bd;
+    border-radius: 50px;
+    font-family: "Georgia", sans-serif;
+    font-size: 17px;
+    color: $btn-secondary-color;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .35s ease-in-out;
+
+    &:hover {
+        background: $btn-secondary-bg-hov;
+        border: $btn-secondary-bd-hov;
+        color: $btn-secondary-color-hov
+
+    }
+}
+
+//Footer bottom END
+
+//MAIN WRAPPERS
+.w-center {
+    width: 100%;
+    max-width: $page-width;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 $page-horizontal-gap;
+
+    @include respond-from(sm-md) {
+        padding: 0 $page-horizontal-gap-sm;
+    }
+
+    @include respond-from(md-xl) {
+        padding: 0 $page-horizontal-gap-md;
+    }
+}
+
+//slider
+
+.slick-arrow {
+    @extend %bttn-reset;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    z-index: 99;
+    background: transparent;
+    border: 2px solid rgb(241, 205, 179);
+    border-radius: 50%;
+    font-size: 0;
+    transition: all .35s ease-in-out;
+
+    &:before {
+        content: url("../img/content/arrow.png");
+        position: absolute;
+        width: 16px;
+        height: 7px;
+    }
+
+    &:hover {
+        background: #f1cdb3;
+
+    }
+
+}
+
+.slick-prev {
+    left: -11%;
+}
+
+.slick-next {
+    right: -11%;
+    transform: rotate(180deg);
+}

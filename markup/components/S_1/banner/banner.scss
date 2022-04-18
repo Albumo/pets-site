@@ -1,0 +1,105 @@
+/*!------------------------------------------------------------------------------
+
+        c-banner-S-1
+
+------------------------------------------------------------------------------*/
+
+.banner {
+  &__wrap {
+    position: relative;
+
+    &.is-animated {
+      .banner__title {
+        animation: fadeIn .55s linear both;
+      }
+
+      .banner__text {
+        animation: fadeIn .70s linear both;
+      }
+
+      .banner__btn-box {
+        animation: fadeIn .80s linear both;
+      }
+    }
+  }
+
+  &__banner-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    img {
+      display: inline-block;
+      width: 100%;
+      object-position: left;
+      @include support(object-fit, cover) {
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__title {
+    color: $banner-title;
+    opacity: 0;
+  }
+
+  &__text {
+    max-width: 280px;
+    color: $banner-text;
+    opacity: 0;
+  }
+
+  &__btn-box {
+    margin-top: 60px;
+    opacity: 0;
+  }
+
+  @include respond-from(sm) {
+    &__banner-box {
+      height: 100vh;
+      padding: 0;
+    }
+
+    &__title {
+      margin: 66px 0 24px;
+      letter-spacing: 2.8px;
+    }
+
+    &__text {
+      max-width: 444px;
+      line-height: 1.6;
+      letter-spacing: -.16px;
+    }
+
+  }
+
+  @include respond-from(lg) {
+    &__banner-box {
+      height: 100vh;
+      padding: 0;
+    }
+
+    &__btn-box {
+      margin-top: 56px;
+    }
+
+    &__title {
+      letter-spacing: 2.8px;
+    }
+
+  }
+}

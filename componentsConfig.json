@@ -1,0 +1,40 @@
+{
+  "component_header": {
+    "number": "S_1",
+    "name": "header"
+  },
+  "component_banner": {
+    "number": "S_1",
+    "name": "banner"
+  },
+
+  "component_shelter": {
+    "number": "S_1",
+    "name": "shelter"
+  },
+
+  "component_pets": {
+    "number": "S_1",
+    "name": "pets"
+  },
+
+  "component_slider": {
+    "number": "S_1",
+    "name": "slider"
+  },
+
+  "component_help": {
+    "number": "S_1",
+    "name": "help"
+  },
+
+  "component_donation": {
+    "number": "S_1",
+    "name": "donation"
+  },
+
+  "component_footer": {
+    "number": "S_1",
+    "name": "footer"
+  }
+}

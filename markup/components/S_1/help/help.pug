@@ -1,0 +1,52 @@
+mixin help()
+
+    | <!-- ********** help-S-1 ********** -->
+
+    .help.js-animate
+        h2.help__title Than you can help </br>our shelter
+
+        .help__items
+            -
+                const items = [{
+                    icon: 'pet-food',
+                    name: 'Pet food',
+                }, {
+                    icon: 'ambulance',
+                    name: 'Transportation',
+                }, {
+                    icon: 'ball',
+                    name: 'Toys',
+                }, {
+                    icon: 'bowl',
+                    name: 'Bowls and cups',
+                }, {
+                    icon: 'shampoo',
+                    name: 'Shampoos',
+                }, {
+                    icon: 'pills',
+                    name: 'Vitamins',
+                }, {
+                    icon: 'syringe',
+                    name: 'Medicines',
+                }, {
+                    icon: 'leash',
+                    name: 'Collars / leashes',
+                }, {
+                    icon: 'cat',
+                    name: 'Sleeping area',
+                }]
+            .help__items-wrap
+                each val in items
+                    +item({
+                        icon: val.icon,
+                        name: val.name
+                    })
+
+    | <!-- ********** help-S-1 ********** -->
+
+mixin item(props)
+
+    .help__item
+        .help__img
+            img(src=`static/img/content/${props.icon}.png` alt="help icon")
+        p.help__name= props.name

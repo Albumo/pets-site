@@ -1,0 +1,57 @@
+.help {
+  padding: 40px 0;
+  text-align: center;
+
+  &.is-animated {
+    .help__title {
+      animation: fadeIn .55s linear both;
+    }
+
+    .help__items-wrap {
+      animation: fadeIn .75s linear both;
+    }
+  }
+
+  &__items-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    opacity: 0;
+    gap: 20px 40px;
+    flex-flow: row wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__name {
+    font-family: "Georgia", sans-serif;
+    font-size: 16px;
+  }
+
+  &__title {
+    opacity: 0;
+  }
+
+  @include respond-from(sm) {
+    padding: 40px 0 40px;
+
+  }
+
+  @include respond-from(md) {
+    padding: 36px 0 0;
+
+    &__items-wrap {
+      margin: 64px auto;
+      gap: 46px 110px;
+    }
+
+    &__name {
+      font-size: 20px;
+    }
+  }
+}

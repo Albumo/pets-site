@@ -1,0 +1,43 @@
+mixin slider()
+
+    | <!-- ********** slider-S-1 ********** -->
+
+    .slider
+        -
+            const pets = [{
+                photo: 'cat',
+                name: 'Katrine',
+            }, {
+                photo: 'jennifer',
+                name: 'Jennifer',
+            }, {
+                photo: 'woody',
+                name: 'Woody',
+            }, {
+                photo: 'cat',
+                name: 'Katrine',
+            }, {
+                photo: 'jennifer',
+                name: 'Jennifer',
+            }, {
+                photo: 'woody',
+                name: 'Woody',
+            }]
+
+        .slider__wrap.js-slider
+            each val in pets
+                +slide({
+                    photo: val.photo,
+                    name: val.name
+                })
+
+    | <!-- ********** slider-S-1 ********** -->
+
+mixin slide(props)
+
+    .slider__slide
+        .slider__slide-content
+            .slider__img
+                img(src=`static/img/content/${props.photo}.jpg` alt="pet image")
+            p.slider__name= props.name
+            a.btn-secondary(href="#") Learn More
