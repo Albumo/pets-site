@@ -33,7 +33,7 @@ $(document).ready(function () {
       arrows: false,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 2000,
       mobileFirst: true,
       responsive: [{
